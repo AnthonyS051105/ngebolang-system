@@ -123,10 +123,20 @@ Mengimplementasikan logika inti: algoritma rute A* multi-moda dengan bobot terno
 - [`frontend/`](https://github.com/AnthonyS051105/ngebolang-mapid) — Next.js frontend + backend ringan Next.js (autentikasi & proksi)
 - [`backend/`](https://github.com/AnthonyS051105/ngebolang-mapid-backend) — Backend Python/FastAPI (routing, tarif, AI chat, laporan warga)
 
-## Live Deploy
+## Live Deploy (untuk panitia/juri)
 
-- Frontend: https://ngebolang-mapid.vercel.app/
-- Backend: https://ngebolang-mapid-backend-production.up.railway.app
+WebGIS ini sudah *live* dan bisa langsung diakses tanpa perlu clone atau setup apa pun — cukup buka tautan berikut:
+
+**Buka aplikasi: https://ngebolang-mapid.vercel.app/**
+
+Halaman ini adalah antarmuka utama (peta, AI Trip Planner, feed laporan). Backend API sudah otomatis terhubung ke:
+
+- Frontend (Vercel): https://ngebolang-mapid.vercel.app/
+- Backend API (Railway): https://ngebolang-mapid-backend-production.up.railway.app
+
+Backend berjalan sebagai layanan API murni (FastAPI) — tidak punya antarmuka visual untuk pengguna akhir, jadi tautannya tidak perlu dibuka langsung oleh juri kecuali ingin memeriksa *endpoint* API secara manual (mis. `GET /api/threads` atau dokumentasi otomatis di `/docs`).
+
+> Catatan: menjelajahi peta dan memakai AI Trip Planner **tidak memerlukan login**. Login hanya diminta saat membuat laporan warga atau memberi *upvote*.
 
 ## Clone dengan submodule
 
